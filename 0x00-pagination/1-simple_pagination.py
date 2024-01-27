@@ -4,10 +4,10 @@
 
 import csv
 import math
-from typing import List
+from typing import List, Tuple
 
 
-def index_range(page: int, page_size: int) -> tuple[int, int]:
+def index_range(page: int, page_size: int) -> Tuple[int, int]:
     """
     index_range - Helper function to specify index
     @page: Int, Page to calculate index for
