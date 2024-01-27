@@ -2,7 +2,10 @@
 """Module to fetch data within a range"""
 
 
-def index_range(page: int, page_size: int) -> tuple[int, int]:
+from typing import Tuple
+
+
+def index_range(page: int, page_size: int) -> Tuple[int, int]:
     """
     index_range - Helper function to specify index
     @page: Int, Page to calculate index for
