@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2024-02-06 16:40+0000\n"
-"PO-Revision-Date: 2024-02-06 16:41+0000\n"
+"PO-Revision-Date: 2024-02-06 16:51+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: fr\n"
 "Language-Team: fr <LL@li.org>\n"
@@ -32,5 +32,5 @@ msgstr "You are logged in as %(username)s"
 
 #: 5-app.py:65 6-app.py:69
 msgid "not_logged_in"
-msgstr "You are not logged in."
+msgstr "You are logged in as %(username)s"
 
