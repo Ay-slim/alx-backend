@@ -28,7 +28,7 @@ def get_locale() -> Any:
     return request.accept_languages.best_match(app.config['LANGUAGES'])
 
 
-@app.route('/', strict_slashes=False)
+@app.route('/')
 def home() -> Any:
     """Application landing page"""
     return render_template('2-index.html')
