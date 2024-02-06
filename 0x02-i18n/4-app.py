@@ -3,7 +3,7 @@
 
 
 from flask import Flask, render_template, request
-from flask_babel import Babel
+from flask_babel import Babel, gettext
 from typing import Any
 
 
@@ -22,16 +22,23 @@ app.config.from_object(Config)
 babel = Babel(app)
 
 
-@babel.localselector
 def get_locale() -> Any:
     """Fetch a request's locale"""
+    req_lang = request.args.get('locale')
+    if req_lang and req_lang in app.config['LANGUAGES']:
+        return req_lang
     return request.accept_languages.best_match(app.config['LANGUAGES'])
+
+
+babel.init_app(app, locale_selector=get_locale)
 
 
 @app.route('/')
 def index() -> Any:
     """Application landing page"""
-    return render_template('2-index.html')
+    return render_template('4-index.html',
+                           title=gettext('home_title'),
+                           body=gettext('home_header'))
 
 
 if __name__ == '__main__':

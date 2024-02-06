@@ -27,11 +27,11 @@ def get_locale() -> Any:
     return request.accept_languages.best_match(app.config['LANGUAGES'])
 
 
-babel.init_app(app, local_selector=get_locale)
+babel.init_app(app, locale_selector=get_locale)
 
 
 @app.route('/')
-def home() -> Any:
+def index() -> Any:
     """Application landing page"""
     return render_template('3-index.html',
                            title=gettext('home_title'),
